@@ -1,10 +1,4 @@
 
-
-
-
-const test = 'he(i/j)llo w(i/j)orld';
-const test2 = '((()(([(i/j)]';
-
 function polybius(input, encode = true) {
     if (!input || input.split(' ').join('').length % 2 !== 0 ) return false;
   let result = null;
@@ -114,9 +108,6 @@ function translateToChars(input) {
   return stringBuilder;
 }
 
-
-
-// '325142131314 14421341'
 
 module.exports = polybius;
 
