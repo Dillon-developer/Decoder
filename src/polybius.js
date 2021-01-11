@@ -1,9 +1,9 @@
-
 function polybius(input, encode = true) {
-    if (!input || input.split(' ').join('').length % 2 !== 0 ) return false;
-  let result = null;
+    if (!input || input === '') return false;
+  let result = '';
   input = input.toLowerCase();
   input = input.split('(i/j)').join('~');
+
   
   if(encode) {
     result = translateToNums(input);
@@ -56,7 +56,6 @@ function translateToNums(input) {
       stringBuilder += ' ';
     }
   }
-
   return stringBuilder;
 }
 
@@ -104,19 +103,11 @@ function translateToChars(input) {
       i += 1;
     }
   }
-
+  if (stringBuilder.includes(undefined)) return false;
   return stringBuilder;
 }
 
-
 module.exports = polybius;
-
-
-
-
-
-
-
 
 
 
